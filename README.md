@@ -10,3 +10,15 @@
 $ npm install firebase-tools
 $ firebase setup:emulators:firestore
 ```
+
+## セットアップ
+
+```
+$ npm install
+```
+
+## Test
+
+```
+$ npm test
+```
