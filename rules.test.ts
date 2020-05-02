@@ -34,21 +34,5 @@ afterAll(async () => {
   await Promise.all(firebase.apps().map(app => app.delete()));
 })
 
-describe('/users', () => {
-  it('ok: ', async () => {
-    const userID = randomID()
-    const db = clientDB({ uid: userID })
-    await firebase.assertSucceeds(
-      db.collection('users').doc(userID).set({ hello: 1 })
-    )
-  })
-
-  it('ng: create', async () => {
-    const userID1 = randomID()
-    const db = clientDB({ uid: userID1 })
-    const userID2 = randomID()
-    await firebase.assertFails(
-      db.collection('users').doc(userID2).set({ hello: 1 })
-    )
-  })
+describe('write test case', () => {
 })

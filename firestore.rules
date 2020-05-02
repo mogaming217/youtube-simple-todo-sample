@@ -1,24 +1,5 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // firebaseの認証ユーザーかどうか
-    function isAnyAuthenticated() {
-      return request.auth != null;
-    }
-
-    // firebaseの匿名以外の認証をしているかどうか（動作未確認！！！！！
-    function isNonAnonymouslyAuthenticated() {
-      return isAnyAuthenticated() && request.auth.token.firebase.sign_in_provider != 'anonymous';
-    }
-
-    // Firebase認証がされているユーザーかどうか
-    function isUserAuthenticated(userID) {
-      return isAnyAuthenticated() && request.auth.uid == userID;
-    }
-
-    match /users/{userID} {
-      allow create: if isUserAuthenticated(userID);
-    }
   }
 }
