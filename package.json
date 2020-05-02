@@ -5,13 +5,15 @@
   "devDependencies": {
     "@firebase/testing": "^0.19.2",
     "@types/jest": "^25.2.1",
+    "@types/uuid": "^7.0.3",
     "jest": "^25.5.3",
     "ts-jest": "^25.4.0",
     "ts-node": "^8.9.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "uuid": "^8.0.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "firebase emulators:exec --only firestore 'jest'"
   },
   "jest": {
     "moduleFileExtensions": [
