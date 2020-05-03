@@ -22,3 +22,6 @@ $ npm install
 ```
 $ npm test
 ```
+
+## 注意
+- `/.vscode/settings.json` でVSCodeで開いたときのフォントサイズを撮影用に変更しています
