@@ -4,16 +4,11 @@
 - Node.js v10.16.0
 - npm 6.14.4
 
-## 事前セットアップ
-
-```
-$ npm install firebase-tools
-$ firebase setup:emulators:firestore
-```
-
 ## セットアップ
 
 ```
+$ npm install -g firebase-tools
+$ firebase setup:emulators:firestore
 $ npm install
 ```
 
